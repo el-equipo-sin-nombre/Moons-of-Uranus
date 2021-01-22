@@ -43,7 +43,16 @@ When we have all the data, the next step is to calculate the new position for ea
 ## Implementation
 
 ## How to Install
-
+You need to have installed ```math```, ```matplotlib```, ```mpl toolkits```, and ```python3```.
+###### Dependencies
+1. Python
+    - ```sudo apt install -y python3-pip```
+2. Math
+     - ```pip3 install math```
+3. Matplotlib
+     - ```pip3 install mathplotlib```
+4. Mpl-toolkits
+     - ```pip3 install mpl_toolkits```
 ## How to run
 
 ## Tests
