@@ -56,7 +56,8 @@ The first thing that we need, is have all the parameters of each body, in this c
 When we have all the data, the next step is to calculate the new position for each body (except for the framework that is static), for this, the program will be able to select one body, calculate the distance to all the other object, calculate the resultant force, and get the new position of the body based on its initial position and the resultant force, save the new position, and do it for all the bodies when the program already has all the new positions, these become into the new "starting positions", the resultant force become into the new force of the body, and the whole process is repeated, until the required simulation time is reached.
 
 ## Implementation
-
+The implementation was already done by Victor de la luz, we take his code from this page:
+- https://github.com/itztli/n-body/blob/master/n-body.py
 ## How to Install
 You need to have installed ```math```, ```matplotlib```, ```mpl toolkits```, and ```python3```.
 ###### Dependencies
