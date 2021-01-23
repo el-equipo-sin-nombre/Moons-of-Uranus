@@ -76,7 +76,7 @@ First, we try running the code with one moon, and we use a delta_time of 0.5s, b
 In the other experiments, we get the correct distance and the system converged, successfully.
 In order to determine if the variable Delta_time was correct, for the simulation time we chose was the one that took the slowest moon to go around.
 ## Results
-![imagen1](collapse.png)
+![imagen1](/results/collapse.png)
 In this image, we can see that the system collapses because we don't use the correct distance.
 ## Conclusions
 Modeling some moons of Uranus was not a difficult task to do, since the code was already done, we only adjust it to our parameters and we look for the chosen data to agree with those requested by the code.
