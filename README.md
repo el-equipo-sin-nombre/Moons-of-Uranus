@@ -77,11 +77,16 @@ In the other experiments, we get the correct distance and the system converged, 
 In order to determine if the variable Delta_time was correct, for the simulation time we chose was the one that took the slowest moon to go around.
 ## Results
 ![imagen1](/results/collapse.png)
+
 In this image, we can see that the system collapses because we don't use the correct distance.
+
 ![imagen2](/results/cordelia.png)
-with the correct distance, the system converged.
+
+With the correct distance, the system converged.
+
 ![imagen2](/results/sistema_estable.png)
 ![imagen2](/results/5lunas_7747seg.png)
+
 These images show the five moons.
 ## Conclusions
 Modeling some moons of Uranus was not a difficult task to do, since the code was already done, we only adjust it to our parameters and we look for the chosen data to agree with those requested by the code.
