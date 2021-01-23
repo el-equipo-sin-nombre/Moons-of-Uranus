@@ -77,5 +77,7 @@ In order to determine if the variable Delta_time was correct, for the simulation
 ## Results
 
 ## Conclusions
-
+Modeling some moons of Uranus was not a difficult task to do, since the code was already done, we only adjust it to our parameters and we look for the chosen data to agree with those requested by the code.
+So it was important to make unit conventions from those we researched to those required by the code (for example, change meters per hour to meters per second, distance from kilometers to meters).
+In conclusion, modeling is a very important tool in our lifes. Models help us to visualize a system as it is or as we want it to be. They let us specify the structure or behavior of a system. Models give us a template that guides us in constructing a system. Models document the decisions we have made.
 ## Bibliography
