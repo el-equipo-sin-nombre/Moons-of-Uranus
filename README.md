@@ -33,10 +33,25 @@ The first thing that we need, is have all the parameters of each body, in this c
 - Uranus: mass and position (the position is 0,0,0 because of is the framework)
 - Mass, velocity and position of:
   - Cordelia
+    - Mass: 0.044 x 10^18 kg
+    - Orbital speed: 38,918.2 km/h
+    - Distance to Urano: 49 750km
   - Cressida
+    - Mass: 0.34 x 10^18 kg
+    - Orbital Speed: 34,869.0km/h
+    - Orbital Speed: 34,869.0km/h
   - Cupid
+    - Mass: 0.0038 x 10^18 kg
+    - Orbital speed: 31,771.2 km/h
+    - Distance to Urano: 74 800 km
   - Puck
+    - Mass: 2.90x10^18 kg
+    - Orbital speed: 29 546,9 km/h
+    - Distance to Urano: 86 010 km
   - Mab
+    - Mass 0.01x10^18 kg
+    - Orbital speed:27,720 km/h
+    - Distance to Urano: 97 734 km
 
 When we have all the data, the next step is to calculate the new position for each body (except for the framework that is static), for this, the program will be able to select one body, calculate the distance to all the other object, calculate the resultant force, and get the new position of the body based on its initial position and the resultant force, save the new position, and do it for all the bodies when the program already has all the new positions, these become into the new "starting positions", the resultant force become into the new force of the body, and the whole process is repeated, until the required simulation time is reached.
 
@@ -54,9 +69,11 @@ You need to have installed ```math```, ```matplotlib```, ```mpl toolkits```, and
 4. Mpl-toolkits
      - ```pip3 install mpl_toolkits```
 ## How to run
-
+Go to the folder of the project and run “python3 n-body.py”, the program will be executed, and you will get a graphic with the trajectory of the five moons.
 ## Tests
-
+First, we try running the code with one moon, and we use a delta_time of 0.5s, but we use an incorrect distance of the moon, so the system collapses.
+In the other experiments, we get the correct distance and the system converged, successfully.
+In order to determine if the variable Delta_time was correct, for the simulation time we chose was the one that took the slowest moon to go around.
 ## Results
 
 ## Conclusions
