@@ -84,8 +84,8 @@ In this image, we can see that the system collapses because we don't use the cor
 
 With the correct distance, the system converged.
 
-![imagen2](/results/sistema_estable.png)
-![imagen2](/results/5lunas_7747seg.png)
+![imagen2](/results/bien_etiquetadas.png)
+![imagen2](/results/etiqueta_lado.png)
 
 These images show the five moons.
 ## Conclusions
