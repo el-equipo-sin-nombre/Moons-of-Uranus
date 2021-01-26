@@ -81,7 +81,7 @@ class Particle:
 
         Vx=(G*B.m*self.dt/(r**3))*u[0]
         Vy=(G*B.m*self.dt/(r**3))*u[1]
-        Vz=(G*B.m*self.dt/(r**3))*u[2]
+        Vz=(G*B.m*self.dt/(r**3))*u[2]
         #print(u)
         #print(r)
         #print((G*B.m/(r**3))*u[0],(G*B.m/(r**3))*u[1],(G*B.m/(r**3))*u[2])         
@@ -139,7 +139,7 @@ uranus = Particle([0,2.8e12,0], [6835,0,0], 8.7e25)
 neptune = Particle([0,4.5e12,0], [5477,0,0],1e26)
 pluto = Particle ([0,3.7e12,0], [4748,0,0],1.3e22)'''
 Urano = Particle([0,0,0],[0,0,0],8.681e25)
-cordelia = Particle([0,4.98e4,0],[10810,0,0],0.044e18)
+cordelia = Particle([0,4.98e7,0],[10810,0,0],0.044e18)
 cressida = Particle([0,6.18e7,0],[9686,0,0],0.34e18)
 #desdemona = Particle([0,6.27e7,0],[9619,0,0],0.18e18)
 #juliet = Particle([0,6.43e7,0],[9500,0,0],0.56e18)
@@ -149,21 +149,13 @@ mab = Particle([0,9.77e7,0],[7700,0,0],0.01e18)
 n_steps = int(lenTime/dt)
 
 
-#p0=[0.001, 0.0, 0.0]  #m
-#v0=[0.0, 0.0, 0.0]  #m/s
-#m=1e1               #kg
-
-#p1=[0.0, 0.0, 0.0]  #m
-#v1=[0.0, 0.0, 1e-3]  #m/s
-#m1=1e1               #kg
-
 #A = Particle(p0,v0,m)
 #B = Particle(p1,v1,m1)
 #C = Particle( [0.0, 0.001, 0.0] , [0.0,0.0,0.0], 1e1)
 
 #particles = [sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune,pluto]
 #particles = [sun,earth]
-particles=[Urano,cordelia]
+particles=[Urano,cordelia,cressida,cupid,puck,mab]
 
 twoBody = Potential(particles,dt)
 
@@ -219,47 +211,20 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 i=0
-c=['g','r','b','g','r','b','g','r','b','g','r','b']
+c=['g','r','b','cyan','#00008B','#6495ED','g','r','b','g','r','b']
+nombres=['Urano','cordelia','cressida','cupid','puck','mab']
 for particle in particles:
     time, trajectory = particle.getTrajectory()
+    aux=0
     for x, y in zip(time,trajectory):
-        ax.scatter(y[0], y[1], y[2], marker='o',c=c[i])
+        if aux == 0:
+            ax.scatter(y[0], y[1], y[2], marker='o',c=c[i],label=nombres[i])
+            aux +=1
+        else:
+            ax.scatter(y[0], y[1], y[2], marker='o',c=c[i])
         #ax.scatter(y[0], y[1], y[2], c=c[i])
     i=i+1
-
-
-# stack the plots
-#lns = []
-#for i in range(len(t)):
-#    ln1, = ax.plot(y0[:i], y1[:i], z1[:i], 'o-', color='steelblue')
-#    ln2, = ax.plot(x2[:i], y2[:i], z2[:i], 'o-', color='darkorange')
-#    lns.append([ln1, ln2])
-
-#line_ani = animation.ArtistAnimation(fig, lns, interval=100, blit=True)
-
-    
-#for point in y:
-#    ax.scatter(point[0], point[1], point[2], marker='o')
-
-#pointA=A.getPosition()
-#ax.scatter(pointA[0], pointA[1], pointA[2], marker='o')
-
-    
-#fig, ax = plt.subplots(3)    
-#ax[0].plot(x,y)
-#ax[0].set(xlabel='time [sec]', ylabel='distance [km]',
-#           title="n-body")
-#ax[0].grid()
-#
-#ax[1].plot(x,v)
-#ax[1].set(xlabel='time [sec]', ylabel='velocity [km/s]')
-#ax[1].grid()
-#
-#ax[2].plot(x,a)
-#ax[2].set(xlabel='time [sec]', ylabel='acceleration [km/s^2]')
-#ax[2].grid()
-
-
+ax.legend()
 
 plt.show()
 
