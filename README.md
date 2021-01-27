@@ -20,6 +20,8 @@ Uranus is the seventh planet in the solar system, the third largest, and the fou
 
 From the mathematical point of view we will consider the problem of n bodies as that of n non-zero, punctual masses, subject to Newton's law of universal attraction. From the physical point of view this is an idealised model.
 
+In this work we are going to model the orbit of some moons of Uranus to analyze their trajectory
+
 ## Resources
 We provide a list of links from different websites and the information we get from each one.
 - [Windows2Universe](https://www.windows2universe.org/our_solar_system/moons_table.html&lang=sp) from this website we got all the names of the moons we are going to use and the distance between them and the planet.
@@ -30,7 +32,9 @@ We provide a list of links from different websites and the information we get fr
 For this project, we use the model of N-body, It works by calculating the path of motion of a body, based on its speed, position, and mass.
 
 The first thing that we need, is have all the parameters of each body, in this case:
-- Uranus: mass and position (the position is 0,0,0 because of is the framework)
+- Uranus: 
+  - mass: 8.681 x 10^25 kg
+  - the position is 0,0,0 because of is the framework.
 - Mass, velocity and position of:
   - Cordelia
     - Mass: 0.044 x 10^18 kg
