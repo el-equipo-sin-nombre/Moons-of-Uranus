@@ -18,9 +18,15 @@ of this license document, but changing it is not allowed.
 
 Uranus is the seventh planet in the solar system, the third largest, and the fourth most massive. The system of Uranus has a unique configuration with respect to the other planets since its axis of rotation is very inclined, almost to its plane of revolution around the Sun. Therefore, its north and south poles are located where most of the other planets have the equator.
 
+The Newton's law of universal attraction, calculates the force of attraction between two bodies, based on their mass, distance and the Universal gravitation constant.
+Its formula is the following.
+
+<img src="https://render.githubusercontent.com/render/math?math=F = G \frac{M1M2}{r^2}">
+where F are the force, G are the Universal gravitation constant, M1 and M2 are the mass of the body 1 and 2, and r^2 are the distance squared. which means the masive and closer objects have more attractive force.
+
 From the mathematical point of view we will consider the problem of n bodies as that of n non-zero, punctual masses, subject to Newton's law of universal attraction. From the physical point of view this is an idealised model.
 
-In this work we are going to model the orbit of some moons of Uranus to analyze their trajectory
+In this work we are going to model the orbit of some moons of Uranus to analyze their trajectory, the goal of the project is to get the system to converge and to be able to see the orbit that the moons of Uranus follow, as well as to analyze the results
 
 ## Resources
 We provide a list of links from different websites and the information we get from each one.
@@ -82,7 +88,7 @@ In order to determine if the variable Delta_time was correct, for the simulation
 ## Results
 ![imagen1](/results/collapse.png)
 
-In this image, we can see that the system collapses because we don't use the correct distance.
+In this image, we can see that the system collapses because we don't use the correct distance. the distance that we use was 4.98e4 instead of 4.98e7, that is te correct distance, the error was because the information was written by people that use "." instead of the coma that we use normally, so we think that was 49.750 km (Forty-nine point seventy-five) when in the reality was 49,750 km (Forty-nine thousand seven hundred fifty).
 
 ![imagen2](/results/cordelia.png)
 
@@ -94,8 +100,14 @@ With the correct distance, the system converged.
 These images show the five moons.
 ## Conclusions
 Modeling some moons of Uranus was not a difficult task to do, since the code was already done, we only adjust it to our parameters and we look for the chosen data to agree with those requested by the code.
-So it was important to make unit conventions from those we researched to those required by the code (for example, change meters per hour to meters per second, distance from kilometers to meters).
-In conclusion, modeling is a very important tool in our lifes. Models help us to visualize a system as it is or as we want it to be. They let us specify the structure or behavior of a system. Models give us a template that guides us in constructing a system. Models document the decisions we have made.
+So it was important to make unit conventions from those we researched to those required by the code, for example, change meters per hour to meters per second, distance from kilometers to meters, because the code was made to work with these units, and as we saw in the first experiment if you don't use the adequate units, the system collapse, so it's important to use the units that the code specifies.
+
+The obtained results show that the trajectory of the moons is an ellipse and the graphic has more points in the part most far away from Urano, which we believe is explained by Newton's law, since it says, "If two massive bodies are close, the force of attraction between them will be greater ", therefore, being close, the moon moves faster around it, and it will move more slowly when it is far from Uranus.
+
+
+
+
+In conclusion, modeling is a very important tool in our lifes. Models help us to visualize a system as it is or as we want it to be. They let us specify the structure or behavior of a system. Models give us a template that guides us in constructing a system.
 ## Bibliography
 - INFORMATION ABOUT THE MOONS OF URANUS
   - Cordelia
