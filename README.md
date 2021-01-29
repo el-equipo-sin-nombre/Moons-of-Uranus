@@ -33,6 +33,11 @@ subject to the forces they exert on each other, is one of the classical problems
 
 This model we are working with, as we mentioned before, uses Newton's law, but to have more realistic results, it would be necessary to use Einstein's theory of relativity. In this case, the problem would be more complex, so we decided to use Newton's Law because good results were obtained.
 
+## Objetives
+- The system convergence
+- Get the orbits of the moons
+- Interpret the results
+
 ## Resources
 We provide a list of links from different websites and the information we get from each one.
 - [Windows2Universe](https://www.windows2universe.org/our_solar_system/moons_table.html&lang=sp) from this website we got all the names of the moons we are going to use and the distance between them and the planet.
