@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 #
 # n-body.py Solve the n-body problem using Newton
-# 
+#
 # Copyright (C) 2019  Victor De la Luz (vdelaluz@enesmorelia.unam.mx)
-#                      
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -24,7 +24,7 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 G=6.674e-11         #m^3kg^-1s^-2
 
 class Particle:
-    
+
     def __init__(self, p, v, m, dt=1):
         self.p = p #position
         self.v = v #velocity
@@ -47,7 +47,7 @@ class Particle:
             u[i] = b - a
             i+=1
         return u
-    
+
     #def integrate(self,dt,p1,m1):
     def integrate(self,B):
         r = self.computeR(B.p)
@@ -57,11 +57,11 @@ class Particle:
         Vy=(G*B.m*self.dt/(r**3))*u[1]
         Vz=(G*B.m*self.dt/(r**3))*u[2]
 
-        
+
         self.v[0] += Vx
         self.v[1] += Vy
         self.v[2] += Vz
-        
+
         self.p = [self.p[0]+ (self.v[0]) *dt,self.p[1]+ (self.v[1])*dt,self.p[2]+ (self.v[2])*dt]
 
     def getPosition(self):
@@ -72,7 +72,7 @@ class Particle:
 
     def getKineticEnergy(self):
         k= (1/2)*self.m*(math.sqrt( self.v[0]^2 +self.v[1]^2+self.v[2]^2))
-        return k    
+        return k
 
     #def integrate(self,dt,p1,m1):
     def computeV(self,B):
@@ -81,10 +81,10 @@ class Particle:
 
         Vx=(G*B.m*self.dt/(r**3))*u[0]
         Vy=(G*B.m*self.dt/(r**3))*u[1]
-        Vz=(G*B.m*self.dt/(r**3))*u[2]
+        Vz=(G*B.m*self.dt/(r**3))*u[2]
         #print(u)
         #print(r)
-        #print((G*B.m/(r**3))*u[0],(G*B.m/(r**3))*u[1],(G*B.m/(r**3))*u[2])         
+        #print((G*B.m/(r**3))*u[0],(G*B.m/(r**3))*u[1],(G*B.m/(r**3))*u[2])
         return [Vx,Vy,Vz]
 
 
@@ -93,9 +93,9 @@ class Particle:
         self.v[0] += v[0]
         self.v[1] += v[1]
         self.v[2] += v[2]
-        
+
     #def integrate(self,dt,p1,m1):
-    def updatePosition(self,time,save):        
+    def updatePosition(self,time,save):
         self.p = [self.p[0]+ (self.v[0]) *dt,self.p[1]+ (self.v[1])*dt,self.p[2]+ (self.v[2])*dt]
         if save:
             self.time.append(time)
@@ -104,9 +104,9 @@ class Particle:
 
     def getTrajectory(self):
         return self.time, self.trajectory
-        
+
 class Potential:
-    
+
     def __init__(self, system, dt):
         self.system = system #set of Particles
         self.dt = dt #set of Particles
@@ -124,7 +124,7 @@ class Potential:
         return self.system
 
 '''lenTime=3600.0*24*30  #sec
-dt=1.0      #sec  '''  
+dt=1.0      #sec  '''
 lenTime=77474 #0.762 dias * 24horas * 60min * 60seg deberia dar una vuelta despues de este tiempo
 dt=0.5
 
@@ -133,7 +133,7 @@ mercury = Particle([0,5.7e10,0],[47000,0,0], 3.285e23)
 venus = Particle([0, 1.1e11, 0], [35000,0,0], 4.8e24)
 earth = Particle([0, 1.5e11, 0], [30000, 0, 0], 6e24)
 mars = Particle([0.0, 2.2e11,0.0],[24000.0,0.0,0.0],2.4e24)
-jupiter=Particle([0.0, 7.7e11, 0.0] ,[13000, 0.0, 0.0],1e28) 
+jupiter=Particle([0.0, 7.7e11, 0.0] ,[13000, 0.0, 0.0],1e28)
 saturn = Particle([0,1.4e12,0], [9000,0,0],5.7e26)
 uranus = Particle([0,2.8e12,0], [6835,0,0], 8.7e25)
 neptune = Particle([0,4.5e12,0], [5477,0,0],1e26)
@@ -227,6 +227,3 @@ for particle in particles:
 ax.legend()
 
 plt.show()
-
-
-
