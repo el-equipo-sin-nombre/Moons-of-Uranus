@@ -31,6 +31,8 @@ In this work we are going to model the orbit of some moons of Uranus to analyze 
 The N-body problem, which focuses on finding the trajectories of several moving bodies subject to the forces exerted on each other, is one of the classical
 subject to the forces they exert on each other, is one of the classical problems of mechanics and astronomy, in our case we chose the planet of Uranus and its moons. Within the astronomical context, the force of interaction is the force of gravity and the bodies in question can be planets, stars, galaxies, etc.
 
+A model must interpret reality, for this reason, the description of the phenomenon we are investigating must be as accurate as possible. In this case, the model we are working with is not very exact, since it uses Newton's Law. And what we need to make it more exact is to use Einstein's theorem of relativity, but since the problem is more complex, we decided to use Newton's Law because it gets good results.
+
 ## Resources
 We provide a list of links from different websites and the information we get from each one.
 - [Windows2Universe](https://www.windows2universe.org/our_solar_system/moons_table.html&lang=sp) from this website we got all the names of the moons we are going to use and the distance between them and the planet.
