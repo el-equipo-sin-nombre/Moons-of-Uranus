@@ -26,7 +26,10 @@ where F are the force, G are the Universal gravitation constant, M1 and M2 are t
 
 From the mathematical point of view we will consider the problem of n bodies as that of n non-zero, punctual masses, subject to Newton's law of universal attraction. From the physical point of view this is an idealised model.
 
-In this work we are going to model the orbit of some moons of Uranus to analyze their trajectory, the goal of the project is to get the system to converge and to be able to see the orbit that the moons of Uranus follow, as well as to analyze the results
+In this work we are going to model the orbit of some moons of Uranus to analyze their trajectory, the goal of the project is to get the system to converge and to be able to see the orbit that the moons of Uranus follow, as well as to analyze the results.
+
+The N-body problem, which focuses on finding the trajectories of several moving bodies subject to the forces exerted on each other, is one of the classical
+subject to the forces they exert on each other, is one of the classical problems of mechanics and astronomy, in our case we chose the planet of Uranus and its moons. Within the astronomical context, the force of interaction is the force of gravity and the bodies in question can be planets, stars, galaxies, etc.
 
 ## Resources
 We provide a list of links from different websites and the information we get from each one.
