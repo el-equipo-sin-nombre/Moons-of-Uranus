@@ -89,7 +89,7 @@ You need to have installed ```math```, ```matplotlib```, ```mpl toolkits```, and
      - ```pip3 install mathplotlib```
 4. Mpl-toolkits
      - ```pip3 install mpl_toolkits```
-## How to run
+## How to running
 Go to the folder of the project and run “python3 n-body.py”, the program will be executed, and you will get a graphic with the trajectory of the five moons.
 ## Tests
 First, we try running the code with one moon, and we use a delta_time of 0.5s, but we use an incorrect distance of the moon, so the system collapses.
